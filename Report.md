@@ -64,4 +64,5 @@ Prioritized Experience Replay (PER) is a straightforward improvement for the van
 The Dueling DQN architecture trades on the idea that the evaluation of the Q function implicitly calculates two quantities:
 - V(s) — the value of being in state s
 - A(s, a) — the advantage of taking action a in state s
+
 This has been implemented. Futur work is required to reach optimal harapeters for this network.
