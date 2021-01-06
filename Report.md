@@ -46,8 +46,12 @@ UPDATE_EVERY = 4        # how often to update the network
 
 ### Prioritized Experience Replay
 
-Experience replay lets online reinforcement learning agents remember and reuse experiences from the past. In prior work, experience transitions were uniformly sampled from a replay memory. However, this approach simply replays transitions at the same frequency that they were originally experienced, regardless of their significance. To replay important transitions more frequently, and therefore learn more efficiently, we use prioritized Experience Replay
+Prioritized Experience Replay (PER) is a straightforward improvement for the vanilla Deep Q-Network (DQN) algorithm. It is built on top of experience replay buffers, which allow a reinforcement learning (RL) agent to store experiences in the form of transition tuples, usually denoted as (st,at,rt,st+1) with states, actions, rewards, and successor states at some time index t. In contrast to consuming samples online and discarding them thereafter, sampling from the stored experiences means they are less heavily “correlated” and can be re-used for learning.
+
 
 ### Dueling Agents
 
-Dueling networks utilize two streams: one that estimates the state value function `V(s)`, and another that estimates the advantage for each action `A(s,a)`. These two values are then combined to obtain the desired Q-values.
+The Dueling DQN architecture trades on the idea that the evaluation of the Q function implicitly calculates two quantities:
+- V(s) — the value of being in state s
+- A(s, a) — the advantage of taking action a in state s
+This has been implemented. Futur work is required to reach optimal harapeters for this network.
