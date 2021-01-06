@@ -65,4 +65,4 @@ The Dueling DQN architecture trades on the idea that the evaluation of the Q fun
 - V(s) — the value of being in state s
 - A(s, a) — the advantage of taking action a in state s
 
-This has been implemented. Futur work is required to reach optimal harapeters for this network.
+This has been implemented. Future work is required to reach optimal harapeters for this network.
