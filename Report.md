@@ -54,4 +54,14 @@ Prioritized Experience Replay (PER) is a straightforward improvement for the van
 The Dueling DQN architecture trades on the idea that the evaluation of the Q function implicitly calculates two quantities:
 - V(s) — the value of being in state s
 - A(s, a) — the advantage of taking action a in state s
+### Prioritized Experience Replay
+
+Prioritized Experience Replay (PER) is a straightforward improvement for the vanilla Deep Q-Network (DQN) algorithm. It is built on top of experience replay buffers, which allow a reinforcement learning (RL) agent to store experiences in the form of transition tuples, usually denoted as (st,at,rt,st+1) with states, actions, rewards, and successor states at some time index t. In contrast to consuming samples online and discarding them thereafter, sampling from the stored experiences means they are less heavily “correlated” and can be re-used for learning.
+
+
+### Dueling Agents
+
+The Dueling DQN architecture trades on the idea that the evaluation of the Q function implicitly calculates two quantities:
+- V(s) — the value of being in state s
+- A(s, a) — the advantage of taking action a in state s
 This has been implemented. Futur work is required to reach optimal harapeters for this network.
